@@ -1,0 +1,144 @@
+; NOTE Multithreaded Solution
+
+XA:
+;M-CNS
+;INITTIALISE
+LINK 800
+
+LINK -3
+LINK -3
+
+MARK LOOP
+COPY #NERV X
+
+@REP 4
+LINK 3
+@END
+
+COPY X #NERV
+
+@REP 4
+LINK -3
+@END
+
+JUMP LOOP
+
+
+
+
+XB:
+;H-CNS
+;INITTIALISE
+LINK 800
+
+@REP 3
+LINK 3
+@END
+
+MARK LOOP
+COPY #NERV X
+
+@REP 6
+LINK -3
+@END
+
+COPY X #NERV
+
+@REP 6
+LINK 3
+@END
+
+JUMP LOOP
+
+
+
+XC:
+;M-CNS
+;INITTIALISE
+LINK 800
+
+@REP 4
+LINK 3
+@END
+
+MARK LOOP
+COPY #NERV X
+
+@REP 8
+LINK -3
+@END
+
+COPY X #NERV
+
+@REP 8
+LINK 3
+@END
+
+JUMP LOOP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; NOTE Singlethreaded Solution
+
+;M-CNS
+;INITTIALISE
+LINK 800
+
+@REP 4
+LINK 3
+@END
+
+
+MARK LOOP
+COPY #NERV X
+LINK -3
+COPY #NERV T
+
+@REP 7
+LINK -3
+@END
+
+COPY X #NERV
+
+LINK 3
+
+COPY T #NERV
+
+LINK 3
+
+COPY #NERV X
+
+@REP 4
+LINK 3
+@END
+
+COPY X #NERV
+
+LINK 3
+LINK 3
+
+JUMP LOOP
+
+
